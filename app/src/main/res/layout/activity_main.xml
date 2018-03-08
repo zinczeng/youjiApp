@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" >
+
+                <fragment
+                    android:id="@+id/fragment_youji"
+                    android:name="com.example.zx.Fragment.YouJiFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+
+                <fragment
+                    android:id="@+id/fragment_gonglve"
+                    android:name="com.example.zx.Fragment.GongLveFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <fragment
+                    android:id="@+id/fragment_zhushou"
+                    android:name="com.example.zx.Fragment.ZhuShouFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <fragment
+                    android:id="@+id/fragment_user"
+                    android:name="com.example.zx.Fragment.UserFragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <!-- 我只是一条线 -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#ccc">
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/main_youji"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawableTop="@drawable/footer_youji_selector"
+                android:text="游 记"
+                android:textColor="@drawable/text_color_select"/>
+
+            <RadioButton
+                android:id="@+id/main_gonglve"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/footer_gonglve_selector"
+                android:text="攻 略"
+                android:textColor="@drawable/text_color_select"/>
+
+            <RadioButton
+                android:id="@+id/main_gongju"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/footer_zhushou_selector"
+                android:text="助 手"
+                android:textColor="@drawable/text_color_select"/>
+            <RadioButton
+                android:id="@+id/main_yonghu"
+                style="@style/main_tab_bottom"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/footer_wo_selector"
+                android:text="我"
+                android:textColor="@drawable/text_color_select"/>
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

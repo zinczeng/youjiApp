@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.administrator.youjiandroid">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--网络访问权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取手机录音机使用权限，听写、识别、语义理解需要用到此权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!--读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--外存储写权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--外存储读权限，构建语法需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--配置权限，用来记录应用配置信息 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--手机定位信息，用来为语义等功能提供定位，提供更精准的服务--> <!--定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        tools:replace="android:label"
+        android:name="com.iflytek.YouDao.CreatApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/youji_lauche"
+        android:label="@string/app_title"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="48ae76de3f" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="9MXQPn1cP3PAOd0kl8ZIL113DLHv0Xpt" />
+
+        <activity android:name="com.example.administrator.youjiandroid.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.administrator.youjiandroid.LoginRegistActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.SearchYouJiActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.SearchGongLveActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.ProductDetailActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.TestActivity"></activity>
+        <activity android:name="com.todolist.TodoPagerActivity"></activity>
+        <activity android:name="com.todolist.TodoListActivity"></activity>
+        <activity android:name="com.baiduNav.BNDemoGuideActivity"></activity>
+        <activity android:name="com.baiduNav.BNMainActivity"></activity>
+        <activity android:name="com.iflytek.speechyoudao.setting.IatSettings"></activity>
+        <activity android:name="com.iflytek.YouDao.TranslateDetailActivity"></activity>
+        <activity android:name="com.iflytek.voice.IatDeActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.GongLveXiangXiActvity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.MySouCangActivity"></activity>
+        <activity android:name="com.example.administrator.youjiandroid.MyYouJiActivity"></activity>
+        <activity android:name="com.weather.WeatherMainActivity"></activity>
+        <activity android:name="com.weather.WeatherActivity"></activity>
+        <activity android:name="com.parities.ParitiesActivity"></activity>
+        <!-- 移动统计分析 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'XXXXXXXX'" />
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="Android_Demo" />
+
+        <service
+            android:name="com.weather.service.AutoUpdateService"
+            android:enabled="true"
+            android:exported="true" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

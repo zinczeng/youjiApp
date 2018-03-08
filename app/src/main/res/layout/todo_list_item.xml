@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/todo_title_textView"
+        android:text="TodoTitle"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/todo_date_textView"
+            android:layout_weight="1"
+            android:text="TodoDate"/>
+
+        <CheckBox
+            android:id="@+id/todo_solved_checkBox"/>
+
+    </TableRow>
+
+</TableLayout>

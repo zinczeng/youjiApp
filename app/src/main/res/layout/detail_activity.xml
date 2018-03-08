@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_detail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/material" >
+            <TextView
+                android:layout_marginRight="60dp"
+                android:gravity="center"
+                android:id="@+id/youjibiaoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+            </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/youjitupian"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:background="@drawable/jiazai"
+        app:rollviewpager_play_delay="3000"
+        app:layout_scrollFlags="scroll|enterAlways" >
+
+
+    </com.jude.rollviewpager.RollPagerView>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:tabIndicatorColor="@color/material_dark"
+                    app:tabSelectedTextColor="@color/material_dark" />
+
+            </android.support.design.widget.AppBarLayout>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:src="@mipmap/ic_add_white"
+                app:borderWidth="0dp"
+                app:elevation="12dp"
+                app:rippleColor="@color/white" />
+
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_close_bottom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:gravity="left"
+                android:text="关闭"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/material_dark"/>
+
+            <TextView
+                android:id="@+id/shoucang_youji"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:gravity="right"
+                android:text="点击收藏"
+                android:textColor="@color/red"/>
+        </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="3">
+<EditText
+    android:id="@+id/youjipinglunneirong"
+    android:layout_width="0dp"
+    android:layout_height="40dp"
+    android:layout_gravity="bottom"
+    android:background="#eee"
+    android:hint="风里雨里，评论等你"
+    android:layout_weight="1"
+    android:layout_marginLeft="20dp"
+    />
+          <TextView
+              android:id="@+id/youjipinglunfasong"
+              android:layout_marginLeft="20dp"
+              android:layout_marginRight="10dp"
+              android:layout_width="60dp"
+              android:gravity="center"
+              android:layout_height="40dp"
+              android:layout_gravity="bottom"
+              android:text="发送"
+              android:background="@color/orange"/>
+      </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/youji_userpt2"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="55dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+    <ImageView
+        android:id="@+id/youji_dianzan"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</FrameLayout>

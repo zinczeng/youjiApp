@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/back_to_shoucang"
+        android:layout_margin="10dp"
+        android:background="@drawable/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/next_neirong"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="下一步"
+        android:textColor="#0000FF"
+        android:textSize="22sp"/>
+</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/get_youjititle"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@null"
+            android:hint="为这次游记创建一个标题吧"
+            android:maxLength="25"
+            android:textSize="22sp"
+            android:textColor="@color/black"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/hasnumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="可输入 25字 "/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="20dp"
+       android:layout_marginLeft="20dp"
+       android:gravity="center_vertical"
+       android:text="提示"
+       android:textSize="18sp"
+       android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:text="1.一个好的游记标题会给你带来更多的阅读者哦。\n2.设置好标题后，可以通过点击“下一步”来添加文字和图片"/>
+</LinearLayout>

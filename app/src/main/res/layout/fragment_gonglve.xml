@@ -1,0 +1,112 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1296db">
+    <android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+     >
+        <FrameLayout
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/go_to_search_"
+                android:background="@drawable/edittext_bg_selector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="想去哪里？"
+                android:gravity="center"
+               />
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center|right"
+                android:background="@drawable/sousuo_hui"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                />
+        </FrameLayout>
+
+    </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:background="@drawable/heisemohu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="当季推荐"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <com.crazysunj.cardslideview.CardViewPager
+            android:id="@+id/cardviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:card_loop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:background="#eee"/>
+            <TextView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:text="热门攻略推荐"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:background="#eee"/>
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh3"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gonglve_lt"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
